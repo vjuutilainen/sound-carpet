@@ -33,7 +33,7 @@ window.onload = function(data){
 
        createTerrain();
 
-       audioContext = new webkitAudioContext || AudioContext;
+       audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
        playSoundFile();
     
